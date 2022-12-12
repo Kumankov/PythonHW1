@@ -9,10 +9,9 @@ sum=0
 for x in 0,1:
     for y in 0,1:
         for z in 0,1:
-            print (f'X = {x}, Y = {y}, Z = {z}')
-            q[i] = int(not(x or y or z) == (not (x) and not (y) and not (z)))
-            print(not(x or y or z) == (not (x) and not (y) and not (z)))            
-            sum=sum+q[i]
+            q[i] = not(x or y or z) == (not (x) and not (y) and not (z))
+            print (f'X = {x}, Y = {y}, Z = {z} - {q[i]}')            
+            sum=sum+q[i]           
             i+=1              
 if sum==0:
     print('Выражение тождественно ложно') 
